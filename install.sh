@@ -3,7 +3,7 @@
 
 if which zsh; then
   # oh my zsh のインストール
-  wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+  wget -q https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
   # .zshrcのコピー
   cp -f .zshrc ~/
   # .zshrc.custom の追加
