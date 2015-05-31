@@ -12,6 +12,15 @@ if which zsh; then
   cp .zshrc.custom ~/
 else
   echo "Please install zsh"
+  exit 1
+fi
+
+if which tmux; then
+  # .zshrcのコピー
+  cp -f .tmux.conf ~/
+else
+  echo "Please install tmux"
+  exit 1
 fi
 
 
