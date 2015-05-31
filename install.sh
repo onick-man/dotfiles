@@ -9,6 +9,8 @@ if which zsh; then
 
   # .zshrc.custom のコピー
   cp .zshrc.custom ~/
+else
+  echo "Please install zsh"
 fi
 
 
