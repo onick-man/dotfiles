@@ -1,6 +1,8 @@
 #!/bin/bash
 
-
+#================================
+#             zsh
+#================================
 if which zsh; then
   # oh my zsh のインストール
   wget -q https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
@@ -15,6 +17,9 @@ else
   exit 1
 fi
 
+#================================
+#             tmux
+#================================
 if which tmux; then
   # .zshrcのコピー
   cp -f .tmux.conf ~/
@@ -23,4 +28,16 @@ else
   exit 1
 fi
 
-
+#================================
+#             vim
+#================================
+if which vim; then
+  # neobundleのinstall
+  mkdir -p ~/.vim/bundle
+  git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  # .vimrcのコピー
+  cp -f .vimrc ~/
+else
+  echo "Please install vim"
+  exit 1
+fi
