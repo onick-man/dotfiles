@@ -1,0 +1,5 @@
+alias sl="ls"
+alias .zshrc="source ~/.zshrc"
+alias cl="clear"
+
+export PATH="$HOME/usr/bin:$PATH"
